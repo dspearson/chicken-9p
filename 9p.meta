@@ -1,0 +1,8 @@
+((egg "9p.egg")
+ (synopsis "9p networked filesystem protocol implementation.  Includes high-level client and server code library")
+ (needs iset)
+ (author "Peter Bex")
+ (category net)
+ (license "BSD")
+ (doc-from-wiki)
+ (files "9p.release-info" "9p-client.scm" "9p-server.scm" "9p-lolevel.scm" "9p.meta" "9p.setup"))

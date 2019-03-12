@@ -1,0 +1,20 @@
+(compile -s -O2 9p-lolevel.scm -j 9p-lolevel)
+(compile -s -O2 9p-lolevel.import.scm)
+
+(compile -s -O2 9p-client.scm -j 9p-client)
+(compile -s -O2 9p-client.import.scm)
+
+(compile -s -O2 9p-server.scm -j 9p-server)
+(compile -s -O2 9p-server.import.scm)
+
+(compile -s -O2 9p-server-vfs.scm -j 9p-server-vfs)
+(compile -s -O2 9p-server-vfs.import.scm)
+
+(install-extension
+  '9p
+  '("9p-lolevel.so" "9p-lolevel.import.so"
+    "9p-client.so" "9p-client.import.so"
+    "9p-server.so" "9p-server.import.so"
+    "9p-server-vfs.so" "9p-server-vfs.import.so")
+  `((version 0.9)
+    (documentation "9p.html")))
